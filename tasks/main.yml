@@ -40,3 +40,17 @@
       - update
       - upgrade
       - never
+
+  - name: Tag - Remove
+    ansible.builtin.import_tasks:
+      file: tag_remove.yml
+    tags:
+      - remove
+      - never
+
+  - name: Tag - Purge
+    ansible.builtin.import_tasks:
+      file: tag_purge.yml
+    tags:
+      - purge
+      - never
